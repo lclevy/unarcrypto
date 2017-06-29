@@ -125,7 +125,7 @@ RAR5
 
 	- deflate, aes 128
 	
-	    	C:\_perso\unarcrypto>py -3.3 unarcrypto.py -p hellohello -s 76d7a5a8d72da80c19acbd0f20f90dabac0c52f6 tests\hello128_deflate.zip
+	    	py -3.3 unarcrypto.py -p hellohello -s 76d7a5a8d72da80c19acbd0f20f90dabac0c52f6 tests\hello128_deflate.zip
 			password= hellohello
 			0x000056: central entry: b'PK\x01\x02' name b'hello.txt' compressed 36 uncompressed 23 compression 99 localHeader 0
 			0x000000: local entry: b'PK\x03\x04' name  b'hello.txt' size 23 compressed 36 method 99 extraLen 11 crc efe883ba
@@ -190,7 +190,7 @@ RAR5
 - Rar5 examples
 	- store, no password
 
-		    C:\_perso\unarcrypto>py -3.3 unarcrypto.py -p hellohello -s 76d7a5a8d72da80c19acbd0f20f90dabac0c52f6 -v 1 tests\hello5_nopw_store.rar
+		    py -3.3 unarcrypto.py -p hellohello -s 76d7a5a8d72da80c19acbd0f20f90dabac0c52f6 -v 1 tests\hello5_nopw_store.rar
 		    password= hellohello
 		    Block header: crc e5b59233 headerSize 10 headerType 1 (Main) headerFlags 5
 		      ARCHIVE_FLAG_VOLUME
