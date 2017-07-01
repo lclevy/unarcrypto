@@ -8,7 +8,7 @@ License is GPLv3
 
 ## Introduction ##
 
-**unarcrypto.py** is an educational tool to depict the use of cryptography for password verification, header and content encryption by popular archivers: zip, 7zip, rar v3 and v5.
+**unarcrypto.py** is an educational tool to depict the use of cryptography for password verification, headers and content encryption by popular archivers: zip, 7zip, rar v3 and v5.
 
 Requirements: PyCrypto 2.6 and Python 3.3
 
@@ -401,6 +401,13 @@ RAR5
 
 - Jean Baptiste Bedrune (@33c0) converted zip code using Construct declarative parser ([https://pypi.python.org/pypi/construct](https://pypi.python.org/pypi/construct "https://pypi.python.org/pypi/construct")), see ziparchive.py
 
+## Related ##
+
+- [7z2hashcat](https://github.com/philsmd/7z2hashcat "7z2hashcat"), extract information from .7z archives (and .sfx files) such that you can crack these "hashes" with hashcat 
+- [zip2john.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/zip2john.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/zip2john.c"), extract info to crack using zip hash John the Ripper
+- [rar2john.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c"), extract rar3 info for cracking. Hash mode is 12500 for header encryption 
+- [rar5_fmt_plug.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar5_fmt_plug.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar5_fmt_plug.c"), rar5 plug-in for JtR
+- [HashCat](https://hashcat.net/wiki/doku.php?id=example_hashes "HashCat") modes: 7zip is 11600, rar3-hp (header protection) is 12500, rar5 is 13000, zip is 13600 
 
 ## To do ##
 
