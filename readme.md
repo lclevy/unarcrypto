@@ -405,7 +405,7 @@ RAR5
 
 - [7z2hashcat](https://github.com/philsmd/7z2hashcat "7z2hashcat"), extract information from .7z archives (and .sfx files) such that you can crack these "hashes" with hashcat 
 - [zip2john.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/zip2john.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/zip2john.c"), extract info to crack using zip hash John the Ripper
-- [rar2john.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c"), extract rar3 info for cracking. Hash mode is 12500 for header encryption 
+- [rar2john.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar2john.c"), extract rar3 info for cracking. 
 - [rar5_fmt_plug.c](https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar5_fmt_plug.c "https://github.com/magnumripper/JohnTheRipper/blob/bleeding-jumbo/src/rar5_fmt_plug.c"), rar5 plug-in for JtR
 - [HashCat](https://hashcat.net/wiki/doku.php?id=example_hashes "HashCat") modes: 7zip is 11600, rar3-hp (header protection) is 12500, rar5 is 13000, zip is 13600 
 
