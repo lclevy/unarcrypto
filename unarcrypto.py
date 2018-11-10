@@ -37,14 +37,25 @@ parser = OptionParser()
 parser.add_option("-p", "--pw", dest="password", help="password")
 parser.add_option("-s", "--sha1sum", dest="sha1sum", help="sha1sum")
 parser.add_option("-v", "--verbose", type='int', dest="verbose", help="verbose", default=0)
+
 (options, args) = parser.parse_args()
+
+if(len(args) != 1):
+  parser.print_help()
+  exit(1)
+
+try:
+  f=open(args[0],'rb')
+  data = f.read()
+  f.close()
+
+except IOError:
+  print("Couldn't read the file", args[0])
+  exit(1)
+
 
 password = options.password
 print('password=',password)
-
-f=open(args[0],'rb')
-data = f.read()
-f.close()
 
 #for Zip with AES
 class Zip:
@@ -1079,4 +1090,4 @@ else:
     archive = Zip(data, endCentralDir )
     archive.parse()
   else:
-    print('unknown format')  
+    print('unknown format')
