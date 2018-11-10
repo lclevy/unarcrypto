@@ -1,8 +1,8 @@
 # unarcrypto.py 
-# crypto experiments for .zip, .7z and .rar archives using Python 3.3 and PyCrypto 2.6.1
+# crypto experiments for .zip, .7z and .rar archives using Python 3.3 and PyCryptodome
 # supported archive formats: 
-#   zip (deflate, aes128 and aes256), 7zip (store, encryption, headers encryption)
-#   rar3 and rar5 (store, encryption, headers encryption) 
+#   zip (deflate, aes128 and aes256), 7zip (store, data encryption, headers encryption)
+#   rar3 and rar5 (store, data encryption, headers encryption) 
 # copyright Laurent Clevy (@lorenzo2472). December 2016
 # license is GPLv3
 
@@ -24,14 +24,12 @@ from Crypto.Cipher import AES
 
 AES_BLOCK_LEN = 16 #used by Rar3 for padding
 
-#windows: use python 3.3
-#http://www.voidspace.org.uk/python/modules.shtml
-#https://www.python.org/downloads/release/python-335/, for PyCrypto
-#py -3.3 get-pip.py --proxy=http://proxy:port
-
-#linux: use python 3.5
-#https://github.com/sfbahr/PyCrypto-Wheels/blob/master/pycrypto-2.6.1-cp35-none-win_amd64.whl
-#>py -m pip install --use-wheel --no-index --find-links=https://github.com/sfbahr/PyCrypto-Wheels/raw/master/pycrypto-2.6.1-cp35-none-win_amd64.whl pycrypto
+#switching from PyCrypto 2.6.1 (no more supported) to PyCryptodome 
+#tested with Python 3.6.7 and PyCryptodome 3.7.0
+#easy_install pycryptodome
+#using pip I had "ModuleNotFoundError: No module named 'Crypto.Protocol.KDF'"
+# https://github.com/Legrandin/pycryptodome/issues/235
+#pip install -r requirement.txt should work when fixed
 
 parser = OptionParser()
 parser.add_option("-p", "--pw", dest="password", help="password")
