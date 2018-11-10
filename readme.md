@@ -12,6 +12,8 @@ License is GPLv3
 
 Requirements: PyCrypto 2.6 and Python 3.3
 
+See also this article in French (soon public): https://connect.ed-diamond.com/MISC/MISC-092/Usage-de-la-cryptographie-par-les-formats-d-archives-ZIP-RAR-et-7z
+
 Supported archives format, encryption and compression algorithms:
 
 - zip (password protected or not, store or deflate, AES128/192?/256)
